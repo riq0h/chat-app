@@ -1,4 +1,4 @@
-node_moduls/
+node_moduls/*
 # Ignore bundler config.
 backend/.bundle
 
