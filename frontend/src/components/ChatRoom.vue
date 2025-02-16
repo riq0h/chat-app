@@ -71,7 +71,6 @@ export default {
     this.createSubscription()
   },
   methods: {
-    // 追加
     createSubscription() {
       this.subscription = this.cable.subscriptions.create(
         { channel: 'RoomChannel', room_id: this.roomId },
