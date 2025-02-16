@@ -8,7 +8,7 @@
         :key="message.id"
         style="background-color: lightgray; padding: 10px; margin-bottom: 10px"
       >
-        <strong style="color: navy">{{ message.sender_name }}:</strong> {{ message.content }}
+        <strong style="color: navy">{{ message.sender_name }}></strong> {{ message.content }}
       </li>
     </ul>
     <form @submit.prevent="sendMessage" style="background-color: lightgray; padding: 20px">

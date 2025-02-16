@@ -1,6 +1,6 @@
 <template>
   <div style="background-color: lightcyan; padding: 20px">
-    <h1 style="color: navy; font-family: Arial, sans-serif">VueChat - チャットルーム一覧</h1>
+    <h1 style="color: navy; font-family: Arial, sans-serif">チャットルーム一覧</h1>
     <ul style="list-style-type: none; padding: 0">
       <li v-for="room in chatRooms" :key="room.id" style="margin-bottom: 10px">
         <router-link
