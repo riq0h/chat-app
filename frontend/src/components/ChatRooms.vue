@@ -1,19 +1,43 @@
 <template>
-  <div>
-    <h1>VueChat - チャットルーム一覧</h1>
-    <ul>
-      <li v-for="room in chatRooms" :key="room.id">
-        <router-link :to="`/rooms/${room.id}`">{{ room.name }}</router-link>
+  <div style="background-color: lightcyan; padding: 20px">
+    <h1 style="color: navy; font-family: Arial, sans-serif">VueChat - チャットルーム一覧</h1>
+    <ul style="list-style-type: none; padding: 0">
+      <li v-for="room in chatRooms" :key="room.id" style="margin-bottom: 10px">
+        <router-link
+          :to="`/rooms/${room.id}`"
+          style="
+            text-decoration: none;
+            color: navy;
+            background-color: lightgray;
+            padding: 5px 10px;
+            font-family: 'Courier New', monospace;
+          "
+          >{{ room.name }}</router-link
+        >
       </li>
     </ul>
-    <h3>チャットルーム作成</h3>
-    <input type="text" v-model="newRoomName" />
-    <div>
-      <button @click="createRoom">作成</button>
+    <h3 style="color: navy; font-family: Arial, sans-serif">チャットルーム作成</h3>
+    <input
+      type="text"
+      v-model="newRoomName"
+      style="padding: 5px; font-family: 'Courier New', monospace"
+    />
+    <div style="margin-top: 10px">
+      <button
+        @click="createRoom"
+        style="
+          background-color: lightgray;
+          color: navy;
+          padding: 5px 10px;
+          border: 1px solid navy;
+          font-family: 'Courier New', monospace;
+        "
+      >
+        作成
+      </button>
     </div>
   </div>
 </template>
-
 <script>
 import axios from 'axios'
 
